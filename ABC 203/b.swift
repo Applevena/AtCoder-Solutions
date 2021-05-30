@@ -1,0 +1,42 @@
+//
+//  Using Swift 5.0
+//
+
+import Foundation
+
+// MARK: Main Solution
+//
+func solution() {
+	let (n, k) = «readInts()
+	
+	var result = 0
+	
+	for i in 1...n {
+		for j in 1...k {
+			result += 100 * i + j
+		}
+	}
+	
+	print(result)
+}
+
+
+solution()
+
+
+// MARK: Utils
+//
+func readLine<T: StringProtocol>(separatedBy separator: T) -> [String] { readLine()!.components(separatedBy: separator) }
+
+func readJoinedLine() -> [String] { readLine()!.map { String($0) } }
+
+func readInt() -> Int { Int(readLine()!)! }
+
+func readInts() -> [Int] { readLine()!.components(separatedBy: " ").map { Int($0)! } }
+
+prefix operator «
+prefix func « <T> (a: [T]) -> (T, T) { (a[0], a[1]) }
+prefix func « <T> (a: [T]) -> (T, T, T) { (a[0], a[1], a[2]) }
+prefix func « <T> (a: [T]) -> (T, T, T, T) { (a[0], a[1], a[2], a[3]) }
+prefix func « <T> (a: [T]) -> (T, T, T, T, T) { (a[0], a[1], a[2], a[3], a[4]) }
+
